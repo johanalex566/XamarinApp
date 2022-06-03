@@ -8,11 +8,11 @@ namespace XamarinAppExam.Services
 {
     public interface IBookService
     {
-        Task<IEnumerable<Book>> GetBooks();
-        Task<Book> GetBook(int id);
-        Task AddBook(Book book);
-        Task SaveBook(Book book);
-        Task DeleteBook(Book book);
+        Task<IEnumerable<BetPlay>> GetBooks();
+        Task<BetPlay> GetBook(int id);
+        Task AddBook(BetPlay book);
+        Task SaveBook(BetPlay book);
+        Task DeleteBook(BetPlay book);
 
     }
 }

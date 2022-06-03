@@ -7,7 +7,7 @@ using XamarinAppExam.Services;
 
 namespace XamarinAppExam.ViewModel
 {
-    [QueryProperty(nameof(Book), nameof(BookId))]
+    [QueryProperty(nameof(BetPlay), nameof(BookId))]
     class BookDetailsViewModel : BaseViewModel
     {
         private string bookId;
@@ -27,7 +27,7 @@ namespace XamarinAppExam.ViewModel
         {
             try
             {
-                var book = new Book
+                var book = new BetPlay
                 {
                     Id = int.Parse(BookId),
                     Title = Title,

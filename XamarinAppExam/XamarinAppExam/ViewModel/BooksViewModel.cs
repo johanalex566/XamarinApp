@@ -11,22 +11,22 @@ namespace XamarinAppExam.ViewModel
 {
     public class BooksViewModel : BaseViewModel
     {
-        private ObservableCollection<Book> books;
-        private Book selectedBook;
+        private ObservableCollection<BetPlay> books;
+        private BetPlay selectedBook;
         private readonly IBookService _bookService;
 
         public BooksViewModel(IBookService bookService)
         {
             _bookService = bookService;
 
-            Books = new ObservableCollection<Book>();
+            Books = new ObservableCollection<BetPlay>();
 
-            DeleteBookCommand = new Command<Book>(async b => await DeleteBook(b));
+            DeleteBookCommand = new Command<BetPlay>(async b => await DeleteBook(b));
 
             AddNewBookCommand = new Command(async () => await GoToAddbookView());
         }
 
-        private async Task DeleteBook(Book b)
+        private async Task DeleteBook(BetPlay b)
         {
             await _bookService.DeleteBook(b);
 
@@ -54,7 +54,7 @@ namespace XamarinAppExam.ViewModel
             }
         }
 
-        async void OnBookSelected(Book book)
+        async void OnBookSelected(BetPlay book)
         {
             if (book == null)
                 return;
@@ -62,7 +62,7 @@ namespace XamarinAppExam.ViewModel
             await Shell.Current.GoToAsync($"{nameof(BookDetails)}?{nameof(BookDetailsViewModel.BookId)}={book.Id}");
         }
 
-        public ObservableCollection<Book> Books
+        public ObservableCollection<BetPlay> Books
         {
             get => books;
             set
@@ -72,7 +72,7 @@ namespace XamarinAppExam.ViewModel
             }
         }
 
-        public Book SelectedBook
+        public BetPlay SelectedBook
         {
             get => selectedBook;
             set

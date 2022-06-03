@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace XamarinAppExam.Model
 {
-    public class Book
+    public class BetPlay
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }

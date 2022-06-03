@@ -16,27 +16,27 @@ namespace XamarinAppExam.Services
             _httpClient = httpClient;
         }
 
-        public async Task<IEnumerable<Book>> GetBooks()
+        public async Task<IEnumerable<BetPlay>> GetBooks()
         {
             var response = await _httpClient.GetAsync("Books");
 
             response.EnsureSuccessStatusCode();
 
             var responseAsString = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<IEnumerable<Book>>(responseAsString);
+            return JsonSerializer.Deserialize<IEnumerable<BetPlay>>(responseAsString);
         }
 
-        public async Task<Book> GetBook(int id)
+        public async Task<BetPlay> GetBook(int id)
         {
             var response = await _httpClient.GetAsync($"Books/{id}");
 
             response.EnsureSuccessStatusCode();
 
             var responseAsString = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<Book>(responseAsString);
+            return JsonSerializer.Deserialize<BetPlay>(responseAsString);
         }
 
-        public async Task AddBook(Book book)
+        public async Task AddBook(BetPlay book)
         {
             var response = await _httpClient.PostAsync("Books",
                 new StringContent(JsonSerializer.Serialize(book), Encoding.UTF8, "application/json"));
@@ -44,14 +44,14 @@ namespace XamarinAppExam.Services
             response.EnsureSuccessStatusCode();
         }
 
-        public async Task DeleteBook(Book book)
+        public async Task DeleteBook(BetPlay book)
         {
             var response = await _httpClient.DeleteAsync($"Books/{book.Id}");
 
             response.EnsureSuccessStatusCode();
         }
 
-        public async Task SaveBook(Book book)
+        public async Task SaveBook(BetPlay book)
         {
             var response = await _httpClient.PutAsync($"Books?id={book.Id}",
                 new StringContent(JsonSerializer.Serialize(book), Encoding.UTF8, "application/json"));

@@ -8,10 +8,10 @@ namespace XamarinAppExam.Services
 {
     public class InMemoryBookService : IBookService
     {
-        private readonly List<Book> _books = new List<Book>();
+        private readonly List<BetPlay> _books = new List<BetPlay>();
         public InMemoryBookService()
         {
-            _books.Add(new Book
+            _books.Add(new BetPlay
             {
                 documentId = "1245",
                 Name = " Ejemplo Pepito",
@@ -23,31 +23,31 @@ namespace XamarinAppExam.Services
             });
         }
 
-        public Task AddBook(Book book)
+        public Task AddBook(BetPlay book)
         {
             book.Id = ++_books.Last().Id;
             _books.Add(book);
             return Task.CompletedTask;
         }
 
-        public Task DeleteBook(Book book)
+        public Task DeleteBook(BetPlay book)
         {
             _books.Remove(book);
             return Task.CompletedTask;
         }
 
-        public Task<Book> GetBook(int id)
+        public Task<BetPlay> GetBook(int id)
         {
             var book = _books.FirstOrDefault(b => b.Id == id);
             return Task.FromResult(book);
         }
 
-        public Task<IEnumerable<Book>> GetBooks()
+        public Task<IEnumerable<BetPlay>> GetBooks()
         {
             return Task.FromResult(_books.AsEnumerable());
         }
 
-        public Task SaveBook(Book book)
+        public Task SaveBook(BetPlay book)
         {
             _books[_books.FindIndex(b => b.Id == book.Id)] = book;
             return Task.CompletedTask;
