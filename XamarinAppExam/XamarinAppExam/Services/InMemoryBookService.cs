@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using XamarinAppExam.Model;
@@ -10,9 +11,16 @@ namespace XamarinAppExam.Services
         private readonly List<Book> _books = new List<Book>();
         public InMemoryBookService()
         {
-            _books.Add(new Book { Id = 1, Title = "Clean code", Author = "Robert C Martin", Description = "A book about good code" });
-            _books.Add(new Book { Id = 2, Title = "The pragmatic programmer", Author = "Andy hunt", Description = "All about pragmatism" });
-            _books.Add(new Book { Id = 3, Title = "Refactoring", Author = "Kent Beck", Description = "Working with legacy code" });
+            _books.Add(new Book
+            {
+                documentId = "1245",
+                Name = " Ejemplo Pepito",
+                Date = DateTime.Now,
+                StakeValue = 25,
+                GainValue =100,
+                Deduction = 10,
+                TotalPayable = 85
+            });
         }
 
         public Task AddBook(Book book)

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinAppExam.Views.Books">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="New Book" Command="{Binding AddNewBookCommand}" />
+        <ToolbarItem Text="Nueva apuesta" Command="{Binding AddNewBookCommand}" />
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <CollectionView 
@@ -14,17 +14,33 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <SwipeView>
-                        <SwipeView.RightItems>
-                            <SwipeItems>
-                                <SwipeItem Text="Delete"
-                                       BackgroundColor="Red"
-                                       Command="{Binding Source={x:Reference BooksCollection}, Path=BindingContext.DeleteBookCommand}"
-                                       CommandParameter="{Binding}"/>
-                            </SwipeItems>
-                        </SwipeView.RightItems>
                         <StackLayout Padding="10">
-                            <Label Text="{Binding Title}" FontSize="Medium" />
-                            <Label Text="{Binding Author}" FontSize="Subtitle" />
+                            
+                            <StackLayout>
+                                <Label Text="Nombre" />
+                                <Editor Text="{Binding Name}" />
+                            </StackLayout>
+                            
+                            <StackLayout>
+                                <Label Text="Valor apuesta" />
+                                <Editor Text="{Binding StakeValue}" />
+                            </StackLayout>
+
+                            <StackLayout>
+                                <Label Text="Valor ganacia" />
+                                <Editor Text="{Binding GainValue} " />
+                            </StackLayout>
+
+                            <StackLayout>
+                                <Label Text="Deducción" />
+                                <Editor Text="{Binding Deduction}" />
+                            </StackLayout>
+
+                            <StackLayout>
+                                <Label Text="Total a pagar" />
+                                <Editor Text="{Binding TotalPayable}" />
+                            </StackLayout>
+
                         </StackLayout>
                     </SwipeView>
                 </DataTemplate>
