@@ -6,10 +6,10 @@ using XamarinAppExam.Model;
 
 namespace XamarinAppExam.Services
 {
-    public class InMemoryBookService : IBookService
+    public class InMemoryBetPlayService : IBetPlayService
     {
         private readonly List<BetPlay> _books = new List<BetPlay>();
-        public InMemoryBookService()
+        public InMemoryBetPlayService()
         {
             _books.Add(new BetPlay
             {

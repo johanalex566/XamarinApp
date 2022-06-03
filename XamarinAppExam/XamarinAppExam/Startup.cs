@@ -13,12 +13,12 @@ namespace XamarinAppExam
             var services = new ServiceCollection();
 
             //add services
-            services.AddSingleton<IBookService, InMemoryBookService>();
+            services.AddSingleton<IBetPlayService, InMemoryBetPlayService>();
 
             //add viewmodels
-            services.AddTransient<BooksViewModel>();
-            services.AddTransient<AddBookViewModel>();
-            services.AddTransient<BookDetailsViewModel>();
+            services.AddTransient<BetPlayViewModel>();
+            services.AddTransient<AddBetPlayViewModel>();
+            services.AddTransient<BetPlayDetailsViewModel>();
 
             serviceProvider = services.BuildServiceProvider();
         }

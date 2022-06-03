@@ -9,13 +9,13 @@ using XamarinAppExam.Views;
 
 namespace XamarinAppExam.ViewModel
 {
-    public class BooksViewModel : BaseViewModel
+    public class BetPlayViewModel : BaseViewModel
     {
         private ObservableCollection<BetPlay> books;
         private BetPlay selectedBook;
-        private readonly IBookService _bookService;
+        private readonly IBetPlayService _bookService;
 
-        public BooksViewModel(IBookService bookService)
+        public BetPlayViewModel(IBetPlayService bookService)
         {
             _bookService = bookService;
 
@@ -59,7 +59,7 @@ namespace XamarinAppExam.ViewModel
             if (book == null)
                 return;
 
-            await Shell.Current.GoToAsync($"{nameof(BookDetails)}?{nameof(BookDetailsViewModel.BookId)}={book.Id}");
+            await Shell.Current.GoToAsync($"{nameof(BookDetails)}?{nameof(BetPlayDetailsViewModel.BookId)}={book.Id}");
         }
 
         public ObservableCollection<BetPlay> Books

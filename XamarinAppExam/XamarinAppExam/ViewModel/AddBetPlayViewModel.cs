@@ -5,9 +5,9 @@ using XamarinAppExam.Services;
 
 namespace XamarinAppExam.ViewModel
 {
-    public class AddBookViewModel
+    public class AddBetPlayViewModel
     {
-        private readonly IBookService _bookService;
+        private readonly IBetPlayService _bookService;
         private string title;
         private string author;
         private string description;

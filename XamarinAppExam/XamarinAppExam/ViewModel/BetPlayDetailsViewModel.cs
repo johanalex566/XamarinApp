@@ -8,15 +8,15 @@ using XamarinAppExam.Services;
 namespace XamarinAppExam.ViewModel
 {
     [QueryProperty(nameof(BetPlay), nameof(BookId))]
-    class BookDetailsViewModel : BaseViewModel
+    class BetPlayDetailsViewModel : BaseViewModel
     {
         private string bookId;
         private string title;
         private string author;
         private string description;
-        private readonly IBookService _bookService;
+        private readonly IBetPlayService _bookService;
 
-        public BookDetailsViewModel(IBookService bookService)
+        public BetPlayDetailsViewModel(IBetPlayService bookService)
         {
             _bookService = bookService;
 

@@ -7,7 +7,7 @@ using XamarinAppExam.Model;
 
 namespace XamarinAppExam.Services
 {
-    public class ApiBookService : IBookService
+    public class ApiBookService : IBetPlayService
     {
         private readonly HttpClient _httpClient;
 

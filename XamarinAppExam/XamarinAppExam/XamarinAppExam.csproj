@@ -20,16 +20,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\AddBetPlay.xaml.cs">
+      <DependentUpon>AddBetPlay.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BetPlayDetails.xaml.cs">
+      <DependentUpon>BetPlayDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\BetPlay.xaml.cs">
+      <DependentUpon>BetPlay.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="AppShell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\AddBook.xaml">
+    <EmbeddedResource Update="Views\AddBetPlay.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\BookDetails.xaml">
+    <EmbeddedResource Update="Views\BetPlayDetails.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Books.xaml">
+    <EmbeddedResource Update="Views\BetPlay.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

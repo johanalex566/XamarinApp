@@ -6,7 +6,7 @@ using XamarinAppExam.Model;
 
 namespace XamarinAppExam.Services
 {
-    public interface IBookService
+    public interface IBetPlayService
     {
         Task<IEnumerable<BetPlay>> GetBooks();
         Task<BetPlay> GetBook(int id);

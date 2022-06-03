@@ -8,12 +8,12 @@ namespace XamarinAppExam.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Books : ContentPage
     {
-        private readonly BooksViewModel _booksViewModel;
+        private readonly BetPlayViewModel _booksViewModel;
         public Books()
         {
             InitializeComponent();
 
-            _booksViewModel = Startup.Resolve<BooksViewModel>();
+            _booksViewModel = Startup.Resolve<BetPlayViewModel>();
             BindingContext = _booksViewModel;
         }
         protected override void OnAppearing()

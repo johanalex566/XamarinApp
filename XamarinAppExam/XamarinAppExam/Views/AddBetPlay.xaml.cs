@@ -16,7 +16,7 @@ namespace XamarinAppExam.Views
         public AddBook()
         {
             InitializeComponent();
-            BindingContext = Startup.Resolve<AddBookViewModel>();
+            BindingContext = Startup.Resolve<AddBetPlayViewModel>();
         }
     }
 }
