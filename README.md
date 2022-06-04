@@ -1,5 +1,8 @@
 Johan Sánchez, clase 8-10
 
+![image](https://user-images.githubusercontent.com/40399697/171968817-d5f06992-835b-4a28-84f4-6b6a66ad7fd2.png)
+
+
 Pendiente realizar operaciones y migración SQLite. Por ahora solo view
 
 Examen Moviles 8 - 10
