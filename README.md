@@ -1,5 +1,8 @@
 Johan Sánchez, clase 8-10
 
+![image](https://user-images.githubusercontent.com/40399697/171969001-dfffdc04-1514-474e-866a-634cb21792d8.png)
+
+
 ![image](https://user-images.githubusercontent.com/40399697/171968817-d5f06992-835b-4a28-84f4-6b6a66ad7fd2.png)
 
 
