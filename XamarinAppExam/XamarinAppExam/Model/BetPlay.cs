@@ -7,16 +7,7 @@ namespace XamarinAppExam.Model
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }
-
-        [JsonPropertyName("title")]
-        public string Title { get; set; }
-
-        [JsonPropertyName("author")]
-        public string Author { get; set; }
-
-        [JsonPropertyName("description")]
-        public string Description { get; set; }
-
+        
         [JsonPropertyName("documentId")]
         public string documentId { get; set; }
 
